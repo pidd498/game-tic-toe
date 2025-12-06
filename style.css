@@ -1,0 +1,111 @@
+/* Reset and base START */
+* {
+  box-sizing: border-box;
+  touch-action: manipulation;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  user-select: none;
+}
+
+h1 {
+  margin-bottom: 0.2em;
+  font-weight: 700;
+  font-size: 2em;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  width: 320px;
+  height: 320px;
+  max-width: 100vw;
+  max-height: 320px;
+  border-radius: 15px;
+  background: #2c2f4a;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.cell {
+  background: #404580;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #cbd5e1;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cell:hover {
+  background: #5a5fd4;
+}
+
+.cell.disabled {
+  cursor: default;
+  color: #9aa3d1;
+}
+
+.cell.winning {
+  background: #ffcf33;
+  color: #222;
+  text-shadow: 0 0 8px #fff;
+}
+
+button#restartBtn {
+  margin-top: 15px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c2f4a;
+  background: #ffcf33;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px #cba919;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 4px;
+}
+
+button#restartBtn:hover,
+button#restartBtn:focus {
+  background: #e6be18;
+  box-shadow: 0 7px 12px #b79c16;
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  min-height: 1.4em;
+  font-weight: 700;
+  text-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 350px) {
+  #game {
+    width: 100vw;
+    height: 100vw;
+  }
+  .cell {
+    font-size: 3rem;
+  }
+  body {
+    padding: 5px;
+  }
+}

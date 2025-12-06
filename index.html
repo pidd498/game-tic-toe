@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Tic Tac Toe pidd 498</h1>
+
+  <div class="controls" style="margin-bottom:12px; text-align:center;">
+    <label><input id="aiToggle" type="checkbox" /> Play vs AI</label>
+    <label style="margin-left:12px;">
+      Difficulty
+      <select id="aiDifficulty">
+        <option value="easy">Easy</option>
+        <option value="hard" selected>Hard</option>
+      </select>
+    </label>
+    <label style="margin-left:12px;">
+      You play
+      <select id="firstSelect">
+        <option value="X" selected>X (first)</option>
+        <option value="O">O (second)</option>
+      </select>
+    </label>
+  </div>
+
+  <div id="game" aria-label="Tic Tac Toe board"></div>
+  <div id="message"></div>
+  <button id="restartBtn">Restart</button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
